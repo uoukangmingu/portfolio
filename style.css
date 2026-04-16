@@ -41,3 +41,6 @@
 #writing-projects .keyline{margin-top:14px;}
 #awards .award-showcase{margin-top:18px;}
 #hr-world .world-moodboard{margin-top:18px;}
+
+.fullscreen-toggle{font-size:14px;line-height:1;}
+.fullscreen-toggle:hover{color:#fff;}

@@ -6,6 +6,7 @@ const currentPage=document.getElementById('currentPage');
 const composerPlaceholder=document.getElementById('composerPlaceholder');
 const prevBtn=document.getElementById('prevBtn');
 const nextBtn=document.getElementById('nextBtn');
+const fullscreenBtn=document.getElementById('fullscreenBtn');
 const order=screens.map(s=>s.id);
 const placeholderMap={
   home:'무엇을 먼저 확인하시겠습니까?',
@@ -43,4 +44,35 @@ function setScreen(id){
 triggers.forEach(btn=>btn.addEventListener('click',()=>setScreen(btn.dataset.screen)));
 prevBtn.addEventListener('click',()=>{const i=order.indexOf(screens.find(s=>s.classList.contains('active')).id); if(i>0) setScreen(order[i-1]);});
 nextBtn.addEventListener('click',()=>{const i=order.indexOf(screens.find(s=>s.classList.contains('active')).id); if(i<order.length-1) setScreen(order[i+1]);});
+
+function syncFullscreenButton(){
+  const active=document.fullscreenElement||document.webkitFullscreenElement;
+  if(!fullscreenBtn) return;
+  fullscreenBtn.textContent=active?'🗗':'⛶';
+  fullscreenBtn.title=active?'전체화면 종료':'전체화면';
+}
+
+if(fullscreenBtn){
+  fullscreenBtn.addEventListener('click',async()=>{
+    try{
+      const active=document.fullscreenElement||document.webkitFullscreenElement;
+      if(!active){
+        const target=document.documentElement;
+        if(target.requestFullscreen){ await target.requestFullscreen(); }
+        else if(target.webkitRequestFullscreen){ target.webkitRequestFullscreen(); }
+      }else{
+        if(document.exitFullscreen){ await document.exitFullscreen(); }
+        else if(document.webkitExitFullscreen){ document.webkitExitFullscreen(); }
+      }
+    }catch(err){
+      console.warn('fullscreen toggle failed', err);
+    } finally {
+      syncFullscreenButton();
+    }
+  });
+  document.addEventListener('fullscreenchange',syncFullscreenButton);
+  document.addEventListener('webkitfullscreenchange',syncFullscreenButton);
+}
+
+syncFullscreenButton();
 setScreen('home');
