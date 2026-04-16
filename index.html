@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Promptfolio — 21P Prototype</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="style.css" rel="stylesheet"/></head><body>
+<div class="app">
+<aside class="sidebar">
+<div class="sidebar-brand"><div class="brand-mark">P</div><div><strong>Promptfolio</strong><span>질문하면, 기획으로 답하는 포트폴리오</span></div></div>
+<nav class="sidebar-nav">
+<button class="sidebar-btn primary" data-screen="home"><span>＋ 새 포트폴리오</span></button>
+<button class="sidebar-btn" data-screen="profile"><span>⌕ 강민구 프로필</span></button>
+<button class="sidebar-btn" data-screen="hr-intro"><span>▣ 대표 프로젝트 Heavy Rain</span></button>
+<button class="sidebar-btn" data-screen="archive"><span>≡ 전체 아카이브</span></button>
+</nav>
+<div class="sidebar-group"><h3>챕터</h3>
+<button class="thread-btn" data-screen="home"><strong>Intro</strong><span>Home · Concept · Profile</span></button>
+<button class="thread-btn" data-screen="strength"><strong>Identity &amp; Credibility</strong><span>강점 · 툴 · 프로세스 · 수상</span></button>
+<button class="thread-btn" data-screen="hr-intro"><strong>Main Case Study</strong><span>Heavy Rain</span></button>
+<button class="thread-btn" data-screen="video-intro"><strong>Supporting Works</strong><span>영상 · 서사</span></button>
+<button class="thread-btn" data-screen="archive"><strong>Archive &amp; Closing</strong><span>전체 작업 · 연락</span></button>
+</div>
+<div class="sidebar-group"><h3>바로 가기</h3>
+<button class="thread-btn" data-screen="tools"><strong>Tool Stack</strong><span>아이콘형 스킬 카드</span></button>
+<button class="thread-btn" data-screen="awards"><strong>Awards</strong><span>성과와 신뢰성</span></button>
+<button class="thread-btn" data-screen="video-projects"><strong>Video Selected</strong><span>대표 영상 3선</span></button>
+<button class="thread-btn" data-screen="writing-projects"><strong>Writing Selected</strong><span>대표 서사 작업</span></button>
+</div>
+<div class="sidebar-group"><h3>최근 작업</h3>
+<div class="recent-item"><strong>헤비 레인 공간 플로우</strong><span>방 구조 / 이동 동선 / 긴장 축적</span></div>
+<div class="recent-item"><strong>웹 예능 감독 프로젝트</strong><span>룰 기반 리듬 설계 / 반응 포인트</span></div>
+<div class="recent-item"><strong>보물경</strong><span>사회극 / 욕망 / 비극 구조</span></div>
+<div class="recent-item"><strong>고래아빠</strong><span>세대 갈등 / 상실 / 상징 설계</span></div>
+</div>
+<div class="sidebar-profile"><img alt="강민구 프로필" src="assets/p01_profile_main.png"/><div><strong>KANG MINGU</strong><span>University of Ulsan · Digital Content Design</span></div></div>
+</aside>
+<div class="main">
+<header class="topbar"><div class="topbar-left"><div class="topbar-path">Promptfolio &gt; <span id="currentTitle">Home</span></div><div class="topbar-page">Page <span id="currentPage">01</span> / 21</div></div><div class="topbar-actions"><button class="ghost" id="prevBtn">←</button><button class="ghost" id="nextBtn">→</button></div></header>
+<main class="stage">
+<section class="screen active type-a" data-page="01" data-title="Home" id="home">
+<div class="home-badge">PROMPTFOLIO · 21P EDITION</div>
+<h1>무엇을 먼저 확인하시겠습니까?</h1>
+<p class="lead-sub">공간, 서사, 인터랙션으로 사람이 몰입하는 경험을 설계하는 콘텐츠 기획자 강민구입니다.</p>
+<div class="profile-hero card card-soft">
+<img alt="강민구 프로필" src="assets/p01_profile_main.png">
+<div>
+<strong>KANG MINGU</strong>
+<span>27 · 울산대학교 디지털콘텐츠디자인 4학년</span>
+<em>Content Planning / Directing / Narrative / Space Design</em>
+</div>
+</img></div>
+<div class="feature-grid two-by-two">
+<button class="feature-card" data-screen="profile"><small>PROFILE</small><strong>강민구는 어떤 콘텐츠 기획자인가</strong><span>학교, 전공, 지향 방향, 기본 정보</span></button>
+<button class="feature-card" data-screen="hr-intro"><small>MAIN CASE</small><strong>대표 프로젝트 Heavy Rain</strong><span>방탈출 기획과 공간 설계의 핵심</span></button>
+<button class="feature-card" data-screen="video-intro"><small>VIDEO</small><strong>웹 예능과 영상은 어떻게 설계하는가</strong><span>감독 · 기획 · 촬영 · 편집</span></button>
+<button class="feature-card" data-screen="tools"><small>TOOLS &amp; CREDIBILITY</small><strong>툴, 스킬, 수상 이력 보기</strong><span>실행 역량과 검증된 결과</span></button>
+</div>
+</section>
+<section class="screen type-b" data-page="02" data-title="Why Promptfolio" id="why">
+<div class="question-row"><div class="user-bubble">왜 포트폴리오를 이런 방식으로 만들었는가?</div></div>
+<div class="answer-row">
+<div class="answer-head">Concept</div>
+<div class="answer-block">
+<h2>기획은 결국 질문에 대한 구조적 답변이라고 생각했습니다.</h2>
+<p>그래서 제 포트폴리오도 단순한 결과물 모음이 아니라, 질문하고 탐색하는 인터페이스처럼 설계했습니다. 콘텐츠 기획은 무엇을 만들었는가보다 무엇을 왜 이렇게 풀었는가가 중요하다고 생각했고, 그 사고 방식을 화면 문법으로 옮겼습니다.</p>
+</div>
+</div>
+<div class="support-grid two">
+<article class="mini-panel"><small>WHY GPT-LIKE UI</small><h3>질문 → 답변 → 첨부자료</h3><p>제가 실제로 기획할 때 쓰는 사고 흐름과 가장 닮아 있는 구조였습니다.</p></article>
+<article class="mini-panel"><small>WHY DIGITAL PORTFOLIO</small><h3>형식 자체도 기획 결과물</h3><p>단순히 예쁜 레이아웃이 아니라, 인터페이스 설계 능력까지 함께 보이도록 구성했습니다.</p></article>
+</div>
+</section>
+<section class="screen type-d" data-page="03" data-title="Profile Snapshot" id="profile">
+<div class="section-intro"><h2>Profile Snapshot</h2><p>강민구의 기본 정보와 포트폴리오를 읽기 위한 최소한의 맥락을 한 화면에서 정리했습니다.</p></div>
+<div class="split-grid profile-grid">
+<article class="card profile-card"><img alt="강민구 프로필" src="assets/p03_profile_snapshot.png"/><div><strong>KANG MINGU</strong><span>Content Planner</span><em>University of Ulsan / Digital Content Design</em></div></article>
+<article class="card detail-card"><ul class="detail-list"><li><span>학교</span><strong>울산대학교</strong></li><li><span>전공</span><strong>디지털콘텐츠디자인</strong></li><li><span>학년</span><strong>4학년</strong></li><li><span>나이</span><strong>27</strong></li><li><span>지향 분야</span><strong>콘텐츠 기획 / 연출 / 서사 / 공간 설계</strong></li><li><span>Email</span><strong>email input</strong></li><li><span>Phone</span><strong>phone input</strong></li></ul></article>
+</div>
+<div class="tag-row"><span>기획</span><span>연출</span><span>촬영</span><span>편집</span><span>서사</span><span>공간 설계</span><span>인터랙션</span></div>
+</section>
+<section class="screen type-b" data-page="04" data-title="Career Direction" id="direction">
+<div class="question-row"><div class="user-bubble">강민구는 어떤 분야를 지향하는가?</div></div>
+<div class="answer-row"><div class="answer-head">Direction</div><div class="answer-block"><h2>저는 장면을 만드는 사람을 넘어, 사람이 몰입하는 구조를 설계하는 콘텐츠 기획자가 되고자 합니다.</h2><p>영상에서는 리듬과 반응의 흐름을, 희곡과 시나리오에서는 감정의 인과와 반전을, 방탈출에서는 공간과 선택의 긴장을 설계해왔습니다. 앞으로도 한 형식에 머무르기보다 경험을 중심에 두고 매체를 넘나드는 콘텐츠 기획자로 성장하고 싶습니다.</p></div></div>
+<div class="support-grid three"><article class="mini-panel"><small>VIDEO</small><h3>Video Content Planning</h3><p>보는 흐름과 장면의 리듬을 설계합니다.</p></article><article class="mini-panel"><small>NARRATIVE</small><h3>Narrative Design</h3><p>감정의 인과와 구조를 설계합니다.</p></article><article class="mini-panel"><small>IMMERSIVE</small><h3>Immersive Experience</h3><p>공간과 선택이 작동하는 몰입 구조를 설계합니다.</p></article></div>
+</section>
+<section class="screen type-b" data-page="05" data-title="Core Strength" id="strength">
+<div class="question-row"><div class="user-bubble">강민구의 핵심 강점은 무엇인가?</div></div>
+<div class="answer-row"><div class="answer-head">Core Strength</div><div class="answer-block"><h2>저는 매체가 달라도 결국 같은 질문을 반복하는 사람입니다.</h2><p>사람은 어디에서 몰입하고, 왜 끝까지 따라오는가. 웹 예능에서는 시청 흐름으로, 서사에서는 감정 구조로, 방탈출에서는 공간 동선과 인터랙션으로 이 질문을 풀어왔습니다.</p></div></div>
+<div class="support-grid four"><article class="mini-panel accent"><small>01</small><h3>보는 경험 설계</h3><p>시선, 반응, 타이밍을 중심으로 장면의 흐름을 설계합니다.</p></article><article class="mini-panel"><small>02</small><h3>읽는 경험 설계</h3><p>감정의 인과와 반전 회수를 중심으로 서사 구조를 설계합니다.</p></article><article class="mini-panel"><small>03</small><h3>체험하는 경험 설계</h3><p>공간, 동선, 선택, 긴장을 중심으로 플레이어 경험을 설계합니다.</p></article><article class="mini-panel"><small>04</small><h3>구조화와 실행</h3><p>아이디어를 구조로 정리하고 실제 결과물로 끝까지 밀어붙입니다.</p></article></div>
+</section>
+<section class="screen type-d" data-page="06" data-title="Tool Stack" id="tools">
+<div class="section-intro"><h2>Tool Stack</h2><p>툴을 많이 쓰는 것보다, 목적에 맞게 조합하는 것을 더 중요하게 생각합니다. 기획 문서화, 영상 편집, 시각 구조화, AI 보조 작업을 프로젝트 목적에 따라 선택하고 연결합니다.</p></div>
+<div class="tool-grid big">
+<article class="tool-card"><div class="tool-icon gpt">GPT</div><h3>ChatGPT</h3><p>Advanced</p></article>
+<article class="tool-card"><div class="tool-icon word">W</div><h3>Word</h3><p>Strong</p></article>
+<article class="tool-card"><div class="tool-icon ppt">P</div><h3>PowerPoint</h3><p>Strong</p></article>
+<article class="tool-card"><div class="tool-icon pr">Pr</div><h3>Premiere Pro</h3><p>Strong</p></article>
+<article class="tool-card"><div class="tool-icon ai">Ai</div><h3>Illustrator</h3><p>Working</p></article>
+<article class="tool-card"><div class="tool-icon figma">Fg</div><h3>Figma</h3><p>Working</p></article>
+<article class="tool-card"><div class="tool-icon podcast">AP</div><h3>Adobe Podcast</h3><p>Working</p></article>
+<article class="tool-card"><div class="tool-icon higgs">Hf</div><h3>Higgsfield</h3><p>Working</p></article>
+</div>
+<p class="footnote">툴은 결과를 대신 만드는 수단이 아니라, 기획의 구조를 더 선명하게 구현하기 위한 보조 장치라고 생각합니다.</p>
+</section>
+<section class="screen type-b" data-page="07" data-title="Working Process" id="process">
+<div class="question-row"><div class="user-bubble">강민구는 어떻게 기획하는가?</div></div>
+<div class="answer-row"><div class="answer-head">Working Process</div><div class="answer-block"><h2>아이디어를 바로 결과물로 옮기기보다, 문제를 정의하고 구조를 세운 뒤 시각화하는 방식으로 작업합니다.</h2><p>질문을 먼저 세우고, 구조를 정리한 다음, 문장과 화면으로 구현합니다. 그래서 결과물 이전에 문제 정의와 흐름 설계가 먼저 존재합니다.</p></div></div>
+<div class="timeline-grid"><div><strong>1</strong><span>질문 정의</span></div><div><strong>2</strong><span>리서치</span></div><div><strong>3</strong><span>구조화</span></div><div><strong>4</strong><span>콘셉트 도출</span></div><div><strong>5</strong><span>기획안 작성</span></div><div><strong>6</strong><span>시각화 / 제작</span></div><div><strong>7</strong><span>피드백 반영</span></div></div><div class="support-grid two process-visual-grid">
+<article class="attach-card"><small>Planning Note</small><img alt="시나리오 원고 페이지" src="assets/p07_process_note_02.png"/></article>
+<article class="attach-card"><small>Process Sketch</small><img alt="아이디어와 공간 스케치" src="assets/p07_process_sketch_01.png"/></article>
+</div>
+<div class="summary-strip">원고, 스케치, 맵, 플로우 차트처럼 생각의 흔적이 남는 자료를 함께 보여주어 결과 이전의 구조 설계를 드러내고자 했습니다.</div>
+</section>
+<section class="screen type-d" data-page="08" data-title="Awards &amp; Credibility" id="awards">
+<div class="section-intro"><h2>Awards &amp; Credibility</h2><p>작업의 방향은 기획에서 시작하지만, 성과는 결국 결과와 반응으로 증명된다고 생각합니다. 수상은 자랑보다도 작업이 검증된 근거처럼 배치하고자 했습니다.</p></div>
+
+
+
+<div class="support-grid two award-showcase">
+<article class="attach-card"><small>Award Board</small><img alt="울산 기업홍보 공모전 대상 상장" src="assets/p08_award_certificate_01.png"/></article>
+<article class="attach-card"><small>Award Ceremony</small><img alt="스토리 공모전 시상식 현장" src="assets/p08_award_certificate_02.png"/></article>
+</div>
+<div class="award-grid big">
+<article class="award-card"><strong>울산 기업홍보 공모전 대상</strong><span>LINC 3.0 사업단 · 기획 / 촬영 / 편집</span></article>
+<article class="award-card"><strong>군인권홍보콘텐츠공모전 장려상</strong><span>국방부장관상 · 기획 / 제작</span></article>
+<article class="award-card"><strong>교내 신관도서관 홍보영상 우수상</strong><span>울산대학교 · 촬영 / 편집 / 기획</span></article>
+<article class="award-card"><strong>2024 울산콘텐츠코리아랩 스토리 공모전 대상</strong><span>극작품 「보물경」 · 서사 설계 역량</span></article>
+<article class="award-card"><strong>웹 예능 · 콘텐츠 프로젝트 다수 수행</strong><span>감독 / 기획 / 연출 / 편집을 통합 수행한 경험</span></article>
+<article class="award-card"><strong>방탈출 · 인터랙션 프로젝트 진행</strong><span>공간 설계와 사용자 경험 구조를 직접 기획한 작업 축적</span></article>
+</div>
+<div class="bottom-band three">
+<article class="bottom-card"><small>TRUST</small><h3>서사 설계 검증</h3><p>극작과 희곡 작업이 실제 공모전 수상으로 이어지며 서사 설계 능력을 증명했습니다.</p></article>
+<article class="bottom-card"><small>TRUST</small><h3>기획·제작 검증</h3><p>영상과 홍보 콘텐츠 분야에서 기획과 제작을 함께 수행하며 완성도와 실행력을 보여주었습니다.</p></article>
+<article class="bottom-card"><small>TRUST</small><h3>경험 설계 검증</h3><p>공간과 인터랙션을 중심으로 한 프로젝트를 통해 몰입형 경험 설계 역량을 축적해왔습니다.</p></article>
+</div>
+<p class="footnote">성과는 자랑보다도, 작업의 방향과 구조가 실제로 설득력을 가졌는지 보여주는 외부의 응답이라고 생각합니다.</p>
+</section>
+<section class="screen active-a type-a" data-page="09" data-title="Portfolio Map" id="map">
+<div class="home-badge">PORTFOLIO MAP</div>
+<h1>다음으로 확인할 수 있는 작업들입니다.</h1>
+<p class="lead-sub">대표작과 작업군, 그리고 전체 아카이브를 하나의 구조 안에서 탐색할 수 있도록 구성했습니다.</p>
+<div class="feature-grid two-by-two">
+<button class="feature-card" data-screen="hr-intro"><small>MAIN CASE</small><strong>Heavy Rain</strong><span>방탈출 · 공간 설계 · 서사형 공포 경험</span></button>
+<button class="feature-card" data-screen="video-intro"><small>VIDEO</small><strong>Video Works</strong><span>웹 예능 · 영상 기획 · 촬영 · 편집</span></button>
+<button class="feature-card" data-screen="writing-intro"><small>WRITING</small><strong>Writing Archive</strong><span>희곡 · 시나리오 · 감정 구조 설계</span></button>
+<button class="feature-card" data-screen="archive"><small>ARCHIVE</small><strong>Full Archive</strong><span>전체 작업과 역할, 키워드 정리</span></button>
+</div>
+</section>
+<section class="screen type-c" data-page="10" data-title="Heavy Rain Intro" id="hr-intro">
+<div class="case-grid-split">
+<div class="case-copy">
+<div class="answer-head">Main Case Study</div>
+<h2>Heavy Rain은 폭우 속 폐정신병원을 배경으로, 공간 탐색과 서사 해석이 동시에 작동하는 몰입형 방탈출 프로젝트입니다.</h2>
+<p>이 프로젝트에서 제가 중요하게 본 것은 단순한 공포 연출이 아니라, 플레이어가 왜 이 공간을 의심하고 왜 다음 선택으로 이동하게 되는지를 설계하는 일이었습니다.</p>
+<div class="keyline">My Role · 세계관 설정 / 공간 구조 기획 / 플레이어 동선 설계 / 퍼즐 흐름 / 긴장 리듬 / 엔딩 분기</div>
+<div class="meta-pills"><span>폐정신병원</span><span>폭우</span><span>공중전화</span><span>손그림 지도</span><span>선택</span></div>
+</div>
+<article class="attach-card big-visual"><small>Space Map</small><img alt="Heavy Rain 메인 맵" src="assets/p10_hr_main_map.png"/></article>
+</div>
+</section>
+<section class="screen type-c" data-page="11" data-title="Worldbuilding" id="hr-world">
+<div class="case-top-copy"><div class="answer-head">Worldbuilding</div><h2>이 프로젝트의 공포는 단순한 시각 자극보다, 왜 이 공간에 들어오게 되었는가에서부터 시작됩니다.</h2><p>새벽, 폭우, 분실된 연락수단, 잠긴 출구라는 상황 안에서 플레이어는 이 공간을 탐색할 수밖에 없는 사람으로 배치됩니다. 그래서 공포는 갑자기 튀어나오는 장면보다, 점점 더 돌아갈 수 없게 되는 상황 속에서 커집니다.</p></div>
+<div class="support-grid six">
+<article class="mini-panel"><small>01</small><h3>공중전화</h3><p>고립의 출발점</p></article>
+<article class="mini-panel"><small>02</small><h3>폭우</h3><p>외부와의 단절</p></article>
+<article class="mini-panel"><small>03</small><h3>폐정신병원</h3><p>폐쇄적 공간과 불안</p></article>
+<article class="mini-panel"><small>04</small><h3>손그림 지도</h3><p>길안내이자 생존 알고리즘</p></article>
+<article class="mini-panel"><small>05</small><h3>잠긴 출구</h3><p>플레이를 강제하는 구조</p></article>
+<article class="mini-panel"><small>06</small><h3>내부자의 흔적</h3><p>서사 해석의 핵심 단서</p></article>
+</div><article class="attach-card big-visual world-moodboard"><small>World Moodboard</small><img alt="Heavy Rain 세계관 무드보드" src="assets/p11_hr_world_moodboard.png"/></article>
+<div class="summary-strip">진입부의 외관, 폭우, 낡은 간판과 같은 시각 요소를 통해 플레이어가 공간에 들어서기 전부터 불안의 분위기를 체감하도록 설계했습니다.</div>
+</section>
+<section class="screen type-c" data-page="12" data-title="Space System" id="hr-space">
+<div class="case-grid-split reverse-balance">
+<article class="attach-card big-visual"><small>Space Logic</small><img alt="Heavy Rain 공간 구조 맵" src="assets/p12_hr_space_map_labeled.png"/></article>
+<div class="case-copy">
+<div class="answer-head">Space System</div>
+<h2>맵은 단순한 배경이 아니라, 플레이어가 정보를 해석하고 긴장을 체감하는 구조 그 자체입니다.</h2>
+<p>각 공간은 기능이 다릅니다. 어떤 공간은 정보를 제공하고, 어떤 공간은 긴장을 높이며, 어떤 공간은 그동안 모은 단서의 의미를 바꾸는 역할을 합니다.</p>
+<ul class="bullet-list"><li><strong>로비</strong> — 첫 불안과 탐색의 출발점</li><li><strong>기록방</strong> — 정보 해석의 핵심</li><li><strong>간호사실</strong> — 구조를 확장하는 허브</li><li><strong>처치실</strong> — 위협과 실용 정보의 교차</li><li><strong>병원장실</strong> — 서사의 방향 전환</li><li><strong>붕괴계단</strong> — 후반부 긴장을 끌어올리는 장치</li></ul>
+</div>
+</div>
+</section>
+<section class="screen type-c" data-page="13" data-title="Player Flow" id="hr-flow">
+<div class="case-top-copy"><div class="answer-head">Player Flow</div><h2>탐색, 발견, 해석, 위협, 추적, 선택의 흐름이 한 번에 끊기지 않도록 리듬을 설계했습니다.</h2><p>정보는 한 번에 주지 않고, 공간과 도구를 통해 조금씩 해석하게 하며, 그 과정에서 감정 곡선이 자연스럽게 상승하도록 설계했습니다.</p></div>
+<div class="flow-layout-grid">
+<article class="attach-card"><small>Emotion Curve</small><img alt="Heavy Rain 플레이어 플로우" src="assets/p13_hr_player_flow.png"/></article>
+<div class="support-grid two by-two"><article class="mini-panel accent"><small>INTERACTION</small><h3>손전등</h3><p>공간 탐색의 시각적 전환점</p></article><article class="mini-panel"><small>INTERACTION</small><h3>배터리</h3><p>긴장을 유지시키는 제한 장치</p></article><article class="mini-panel"><small>INTERACTION</small><h3>지도</h3><p>정보 해석의 중심</p></article><article class="mini-panel"><small>INTERACTION</small><h3>열쇠 / 분기</h3><p>결정과 결과를 연결하는 구조</p></article></div>
+</div>
+</section>
+<section class="screen type-b" data-page="14" data-title="Why Heavy Rain" id="hr-why">
+<div class="question-row"><div class="user-bubble">왜 Heavy Rain이 대표작인가?</div></div>
+<div class="answer-row"><div class="answer-head">Why It Matters</div><div class="answer-block"><h2>이 프로젝트는 서사, 공간, 시스템, 감정 곡선이 함께 작동하는 구조를 직접 설계했다는 점에서 제 정체성을 가장 잘 드러냅니다.</h2><p>Heavy Rain은 세계관 설계, 공간 구조, 플레이어 동선, 퍼즐 흐름, 감정 곡선, 선택의 결과까지 제가 중요하게 생각하는 기획 요소들이 함께 들어 있는 작업입니다.</p></div></div>
+<div class="support-grid three"><article class="mini-panel"><small>SERIF</small><h3>서사</h3><p>왜 이 공간에 머물게 되는지 설명합니다.</p></article><article class="mini-panel"><small>SPACE</small><h3>공간</h3><p>정보와 감정을 동시에 조절합니다.</p></article><article class="mini-panel"><small>SYSTEM</small><h3>시스템</h3><p>선택과 긴장이 끝까지 이어지게 만듭니다.</p></article></div>
+</section>
+<section class="screen type-b" data-page="15" data-title="Video Works Intro" id="video-intro">
+<div class="question-row"><div class="user-bubble">영상 작업에서는 무엇을 가장 중요하게 보는가?</div></div>
+<div class="answer-row"><div class="answer-head">Video Works</div><div class="answer-block"><h2>재미가 발생하는 장면보다, 그 장면이 도착하도록 만드는 리듬을 먼저 설계합니다.</h2><p>누가 먼저 보이고, 어떤 타이밍에 정보가 열리며, 어디서 반응이 터지고 잠깐 숨을 고르게 할지를 설계해야 장면이 기억에 남는다고 생각합니다. 그래서 감독, 기획, 촬영, 편집을 하나의 시청 경험 설계로 봅니다.</p></div></div>
+<div class="tag-row emphasis"><span>기획</span><span>연출</span><span>촬영</span><span>편집</span><span>반응 포인트</span><span>컷 타이밍</span><span>정보 개방</span></div>
+</section>
+<section class="screen type-c" data-page="16" data-title="Video Selected Projects" id="video-projects">
+<div class="support-grid three project-grid">
+<article class="project-card"><small>PROJECT 01</small><img alt="절대전공 대표 썸네일" src="assets/p16_video_project01_thumb.jpg"/><h3>웹 예능 감독 프로젝트</h3><p>룰을 빠르게 이해시키고 반응 포인트를 선명하게 배치해 끝까지 따라오게 되는 흐름을 설계했습니다.</p><div class="meta-pills compact"><span>기획</span><span>연출</span><span>촬영</span><span>편집</span></div></article>
+<article class="project-card"><small>PROJECT 02</small><img alt="홍보·캠페인 영상 대표 썸네일" src="assets/p16_video_project02_thumb.jpg"/><h3>홍보·공모전 영상 작업</h3><p>메시지가 이해되기 전에 장면이 먼저 기억되도록 컷의 기능과 연결, 타이포와 썸네일의 인상을 함께 고려했습니다.</p><div class="meta-pills compact"><span>메시지 구조</span><span>컷 타이밍</span><span>반응 유도</span></div></article>
+<article class="project-card"><small>PROJECT 03</small><img alt="랜덤 룰렛 사이트 미니게임 화면" src="assets/p16_video_project03_thumb.png"/><h3>랜덤 룰렛 사이트 기반 미니게임</h3><p>사용자의 이해와 몰입 타이밍이 이어지도록 인터랙션의 흐름, 정보 개방 순서, 카드 배치와 시각적 리듬을 설계했습니다.</p><div class="meta-pills compact"><span>웹 구조</span><span>상호작용</span><span>게임 규칙</span><span>정보 개방</span></div></article>
+</div>
+</section>
+<section class="screen type-b" data-page="17" data-title="Writing Works Intro" id="writing-intro">
+<div class="question-row"><div class="user-bubble">희곡과 시나리오에서는 무엇을 설계하는가?</div></div>
+<div class="answer-row"><div class="answer-head">Writing Archive</div><div class="answer-block"><h2>사건보다 먼저 감정의 인과를 설계합니다.</h2><p>무슨 일이 일어나는가보다 왜 이 말이 지금 나와야 하는가를 더 중요하게 봅니다. 감정이 폭발하는 장면이라도 그 이전에 축적된 침묵과 맥락이 있어야 하고, 반전 역시 놀라움보다 회수의 설득력이 먼저라고 생각합니다.</p></div></div>
+<div class="tag-row emphasis"><span>감정 축적</span><span>반전 회수</span><span>인과</span><span>침묵</span><span>선택</span><span>상실</span></div>
+</section>
+<section class="screen type-c" data-page="18" data-title="Writing Selected Works" id="writing-projects">
+<div class="support-grid two by-two equal-height">
+<article class="project-card text-card"><small>WORK 01</small><h3>보물경</h3><img alt="보물경 대표 이미지" src="assets/p18_writing_bomulgyeong.png"/><p>사회극 / 희곡 / 욕망·지역성·비극 구조</p><div class="keyline">지역성과 인간 욕망이 충돌하는 구조를 중심으로 집필했습니다.</div></article>
+<article class="project-card text-card"><small>WORK 02</small><h3>우리 집에는 고래가 산다</h3><img alt="우리 집에는 고래가 산다 원고 이미지" src="assets/p18_writing_motherlike.png"/><p>가족 드라마 / 감성 서사 / 상징극</p><div class="keyline">가족 안에 오래 눌러앉은 상처와 사랑을 상징적으로 풀어낸 감정 중심의 서사입니다.</div></article>
+<article class="project-card text-card"><small>WORK 03</small><h3>고래아빠</h3><img alt="고래아빠 원고 이미지" src="assets/p18_writing_whaledad.png"/><p>리얼리즘 드라마 / 희곡 / 세대 갈등·상실·상징</p><div class="keyline">인물 관계와 상징을 통해 세대 간 감정의 균열을 드러냈습니다.</div></article>
+<article class="project-card text-card"><small>WORK 04</small><h3>花創 : 시클라멘 다발</h3><img alt="花創 시클라멘 다발 원고 이미지" src="assets/p18_writing_lovefool.png"/><p>드라마 / 공포 / 비극 / 상징적 정서</p><div class="keyline">꽃과 정서를 매개로 인물의 감정과 관계를 서정적이면서도 불안하게 풀어냈습니다.</div></article>
+</div>
+<div class="summary-strip">서사 작업은 사건 자체보다 감정의 인과와 회수 구조를 어떻게 설계했는지 보여주는 작업군으로 배치했습니다.</div></section>
+<section class="screen type-b" data-page="19" data-title="Cross-over Ability" id="cross">
+<div class="question-row"><div class="user-bubble">왜 서로 다른 매체를 다루는가?</div></div>
+<div class="answer-row"><div class="answer-head">Cross-over Ability</div><div class="answer-block"><h2>영상, 희곡, 방탈출은 다른 형식이지만, 저는 결국 같은 질문을 다른 매체로 풀고 있습니다.</h2><p>사람은 어디에서 몰입하는가. 저는 이 질문을 영상에서는 시청 흐름으로, 희곡에서는 감정 구조로, 방탈출에서는 공간 경험으로 풀어왔습니다. 그래서 다양한 형식을 다룬다는 사실보다, 그 형식들을 하나의 기획 언어로 연결할 수 있다는 점을 강점으로 생각합니다.</p></div></div>
+<div class="support-grid three"><article class="mini-panel"><small>VIDEO</small><h3>시청 경험 설계</h3><p>보는 흐름과 반응의 타이밍을 설계합니다.</p></article><article class="mini-panel"><small>WRITING</small><h3>감정 경험 설계</h3><p>감정의 인과와 반전 구조를 설계합니다.</p></article><article class="mini-panel"><small>SPACE</small><h3>공간 경험 설계</h3><p>동선과 선택이 작동하는 몰입 구조를 설계합니다.</p></article></div>
+</section>
+<section class="screen type-d" data-page="20" data-title="Full Archive" id="archive">
+<div class="section-intro"><h2>Full Archive</h2><p>대표작과 핵심 작업 외에도, 다양한 형식의 기획과 제작 경험을 쌓아왔습니다.</p></div>
+<div class="support-grid two archive-columns">
+<article class="archive-panel"><small>공간 / 인터랙션</small><h3>Space &amp; System</h3><div class="archive-list"><div class="archive-entry"><strong>Heavy Rain</strong><span>기획 / 공간 설계 / 방탈출 / 서사형 공포 경험</span></div><div class="archive-entry"><strong>방탈출 구조 설계</strong><span>동선 / 퍼즐 흐름 / 긴장 축적 / 시스템 정리</span></div><div class="archive-entry"><strong>공간 동선 알고리즘</strong><span>맵 구성 / 플레이 플로우 / 정보 해석 구조</span></div><div class="archive-entry"><strong>게임형 상호작용 설계</strong><span>인터랙티브 규칙 / 경험 리듬 / 웹 실험</span></div></div></article>
+<article class="archive-panel"><small>영상 / 서사 / 제작</small><h3>Selected Archive</h3><div class="archive-list"><div class="archive-entry"><strong>웹 예능 감독 프로젝트</strong><span>기획 / 촬영 / 편집 / 룰 기반 리듬 설계</span></div><div class="archive-entry"><strong>홍보·캠페인 영상 작업</strong><span>메시지 구조 / 컷 타이밍 / 반응 유도</span></div><div class="archive-entry"><strong>보물경</strong><span>원안 / 집필 / 희곡 / 지역성·욕망·비극</span></div><div class="archive-entry"><strong>고래아빠</strong><span>집필 / 희곡 / 세대 갈등·리얼리즘</span></div></div></article>
+</div>
+<p class="footnote">많은 작업을 다뤘다는 사실보다, 그 작업들이 하나의 구조 언어로 연결된다는 점을 보여주고 싶었습니다.</p>
+</section>
+<section class="screen type-b" data-page="21" data-title="Closing / Contact" id="closing">
+<div class="question-row"><div class="user-bubble">왜 강민구여야 하는가?</div></div>
+<div class="closing-layout">
+<div class="answer-row compact-block"><div class="answer-head">Closing</div><div class="answer-block"><h2>저는 결과물을 정리하는 사람보다, 사람의 시선과 감정이 끝까지 따라오게 되는 구조를 설계하는 사람입니다.</h2><p>웹 예능에서는 보는 흐름을, 희곡과 시나리오에서는 감정의 축적을, 방탈출에서는 공간과 선택의 긴장을 설계해왔습니다. 앞으로도 콘텐츠를 만드는 사람을 넘어, 경험이 작동하는 구조를 설계하는 콘텐츠 기획자로 성장하고자 합니다.</p></div></div>
+<article class="card contact-card"><small>Contact</small><h3>KANG MINGU</h3><ul class="detail-list"><li><span>Email</span><strong>email input</strong></li><li><span>Phone</span><strong>phone input</strong></li><li><span>Keywords</span><strong>Planning / Directing / Narrative / Space</strong></li></ul></article>
+</div>
+<p class="closing-line">질문을 던지고,<br/>사람이 몰입하는 답을 설계하겠습니다.</p>
+</section>
+</main>
+<div class="composer-shell"><div class="composer"><button class="composer-icon">＋</button><div class="composer-placeholder" id="composerPlaceholder">무엇을 먼저 확인하시겠습니까?</div><button class="composer-send">⤴</button></div></div>
+</div>
+</div>
+<script src="app.js"></script></body></html>
