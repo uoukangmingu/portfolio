@@ -30,17 +30,61 @@
 @media (max-width: 1200px){.app{grid-template-columns:220px 1fr}.tool-grid.big,.support-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.timeline-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (max-width: 1040px){html,body{overflow:auto}.app{grid-template-columns:1fr;height:auto}.sidebar{border-right:0;border-bottom:1px solid rgba(255,255,255,.05)}.main{grid-template-rows:52px auto 96px}.stage{overflow:visible}.screen{position:static;display:none;opacity:1;transform:none;pointer-events:auto;padding-bottom:36px}.screen.active{display:block}.two-by-two,.support-grid.two,.support-grid.three,.support-grid.four,.support-grid.six,.split-grid,.case-grid-split,.flow-layout-grid,.closing-layout,.tool-grid.big,.award-grid.big,.timeline-grid{grid-template-columns:1fr}.profile-hero,.profile-card{flex-direction:column;text-align:center}.archive-entry{grid-template-columns:1fr}.composer{width:100%}}
 
+/* --- Responsive and keyboard-navigation refinements --- */
+html,body{height:100dvh}
+.app{min-height:100dvh}
+.topbar-left{flex-wrap:wrap}
+.topbar-hint{display:inline-flex;align-items:center;min-height:28px;padding:0 10px;border-radius:999px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03);font-size:11px;letter-spacing:-.01em;color:var(--muted)}
+.topbar-actions .ghost{width:34px;height:34px}
+.screen{width:min(1100px,calc(100% - 28px));padding:32px 0 118px}
+.answer-block,.case-copy,.case-top-copy{max-width:880px}
+.feature-card,.mini-panel,.project-card,.archive-panel,.tool-card,.award-card,.bottom-card,.attach-card,.card{overflow:hidden}
 
-/* asset-applied refinements */
-.process-visual-grid img,.award-showcase img,.world-moodboard img{margin-top:12px;display:block;width:100%;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#191a1e;}
-.process-visual-grid img{aspect-ratio:1.14/1;object-fit:cover;}
-.award-showcase img{aspect-ratio:1.45/1;object-fit:cover;}
-.world-moodboard img{aspect-ratio:1.6/1;object-fit:cover;}
-#writing-projects .project-card img{display:block;width:100%;margin-top:12px;margin-bottom:12px;aspect-ratio:4/5;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#191a1e;}
-#writing-projects .project-card{overflow:hidden;}
-#writing-projects .keyline{margin-top:14px;}
-#awards .award-showcase{margin-top:18px;}
-#hr-world .world-moodboard{margin-top:18px;}
+@media (max-width: 1360px){
+  .app{grid-template-columns:224px minmax(0,1fr)}
+  .screen{width:min(1020px,calc(100% - 24px))}
+  .type-a h1{font-size:clamp(34px,4vw,52px)}
+}
 
-.fullscreen-toggle{font-size:14px;line-height:1;}
-.fullscreen-toggle:hover{color:#fff;}
+@media (max-height: 920px){
+  .main{grid-template-rows:48px 1fr 84px}
+  .topbar{padding:0 14px 0 16px}
+  .screen{padding:24px 0 100px}
+  .type-a h1{font-size:clamp(32px,4vw,48px)}
+  .lead-sub,.answer-block p,.case-copy p,.case-top-copy p{font-size:16px;line-height:1.65}
+  .answer-block h2,.case-copy h2,.case-top-copy h2{font-size:clamp(26px,3vw,38px)}
+  .feature-card{min-height:112px;padding:16px}
+  .card,.mini-panel,.attach-card,.project-card,.archive-panel,.tool-card,.award-card,.bottom-card{padding:18px}
+  .timeline-grid div{padding:14px 10px}
+  .composer-shell{padding:10px 14px 16px}
+  .composer{min-height:54px}
+}
+
+@media (max-height: 820px){
+  .sidebar{padding:10px 8px;gap:8px}
+  .sidebar-brand{padding:8px 10px}
+  .sidebar-btn,.thread-btn{min-height:34px;padding:8px 10px}
+  .sidebar-group h3{margin:4px 10px}
+  .screen{padding:18px 0 88px}
+  .type-a{justify-content:flex-start;padding-top:10px}
+  .profile-hero{margin-top:14px}
+  .feature-grid{gap:10px;margin-top:16px}
+  .support-grid,.bottom-band,.dual-note,.timeline-grid,.split-grid{gap:10px;margin-top:14px}
+  .section-intro p,.lead-sub,.answer-block p,.case-copy p,.case-top-copy p,.mini-panel p,.project-card p,.archive-entry span,.bottom-card p,.bottom-card li{font-size:14px;line-height:1.55}
+  .tool-icon{width:56px;height:56px;margin-bottom:10px}
+  .archive-columns .archive-panel,.archive-panel{min-height:auto}
+  .composer-placeholder{font-size:13px}
+}
+
+@media (max-width: 1200px){
+  .topbar-hint{display:none}
+}
+
+@media (max-width: 1040px){
+  .main{grid-template-rows:52px auto 84px}
+  .topbar-left{gap:8px}
+  .topbar-hint{display:none}
+  .stage{padding:0 14px}
+  .screen{width:min(100%,calc(100% - 8px));padding:20px 0 32px}
+  .sidebar-profile{margin-top:8px}
+}
